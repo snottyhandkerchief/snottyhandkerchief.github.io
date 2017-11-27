@@ -1,18 +1,189 @@
 <!DOCTYPE html>
+
 <html>
-    <head>
-        <title>Snotty Handkerchief - your NHS guide</title>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Snotty Handkerchief - your NHS guide</title>
 
-    <link rel="stylesheet" type="text/css" href="exercise1.css">
+<script src="jquery.min.js"></script>
+<script src="bootstrap.min.js"></script>
 
-    </head>
-    <body>
-        <h1>Snotty Handkerchief!</h1>
+<link href='bootstrap3/css/bootstrap.css' rel='stylesheet'>
+<link href='main.css' rel='stylesheet'>
 
-        <p><b>DISCLAIMER:<br>If you need medical advice out of hours, ring 111
-If you have a life-threatening medical emergency, ring 999</b>
-</p>
+  <link rel="stylesheet" href="jquery-ui.css">
+  <script src="jquery-1.12.4.js"></script>
+  <script src="jquery-ui.js"></script>
+  <script>
+  $( function() {
+    $( "#tabs" ).tabs({
+      event: "mouseover"
+    });
+  } );
+  </script>
+
+</head>
+
+<body>
+
+<!--NAVIGATION BAR-->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#"><img src='images/shlogo.png' height='47'></a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#diagram"><img src='images/diagnoseme.png' height='30'></a></li>
+            <li><a href="#about"><img src='images/about.png' height='30'></a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+<!--TITLE CAROUSEL-->
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#myCarousel" data-slide-to="1"></li>
+    <li data-target="#myCarousel" data-slide-to="2"></li>
+  </ol>
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner">
+    <div class="item active" role="listbox">
+           <br><br><br><img src='images/SH_title2.png' class="img-responsive" alt="Responsive image">
+    </div>
+
+    <div class="item">
+      <br><br><br><img src="images/flu.png" class="img-responsive" alt="Responsive image">
+    </div>
+
+    <div class="item">
+      <br><br><br><img src="images/wash.png" class="img-responsive" alt="Responsive image">
+    </div>
+  </div>
+
+  <!-- Left and right controls -->
+  <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#myCarousel" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
 
 
-    </body>
+<!--DIAGNOSE DIAGRAM-->
+  <div id="diagram" class="text-left"><div class='container'>
+    <br><br><br><center><img src='images/diagnoseme.png' height='50'></center>
+     <div class='row'>
+    <div class='col-sm-4'>
+    <div>
+      <img src='images/girl.png' class="img-responsive" alt="Responsive image">
+    </div></div>
+    <div class='col-sm-1'>
+    </div>
+    <div class='col-sm-7'>
+    <div><br>
+    <div id="tabs">
+  <ul>
+    <li><a href="#tabs-1">Cold vs. Flu</a></li>
+    <li><a href="#tabs-2">Fever</a></li>
+    <li><a href="#tabs-3">Coughing</a></li>
+    <li><a href="#tabs-4">Sneezing</a></li>
+    <li><a href="#tabs-5">Stuffy or Runny Nose</a></li>
+    <li><a href="#tabs-6">Sore Throat</a></li>
+    <li><a href="#tabs-7">Chest Discomfort</a></li>
+    <li><a href="#tabs-8">Headache</a></li>
+  </ul>
+  <div id="tabs-1">
+       <p>Flu and cold are both caused by viruses, but completely different ones. There are many viruses that can cause a cold, but only a few that can cause a flu. Cold symptoms are not sudden and develop over a few days. The flu has a rapid onset within 3-6 hours. The flu hits hard and includes sudden symptoms like high fever, aches and pains.</p><br>
+       <center><img src="images/1flu.png" height='200'></center>
+  </div>
+  <div id="tabs-2">
+       <li class="product_item">Fever is rare with a cold, but present with the flu</li>
+       <li class="product_item">A temperature of 38C or higher for 3-4 days is associated with the flu</li>
+       <li class="product_item">Unexplained chills and tiredness can be a sign of the flu</li>
+       <li class="product_item">Severe aches and pains are common with the flu</li><br>
+       <center><img src="images/2fever.png" height='200'></center>
+  </div>
+  <div id="tabs-3">
+       <li class="product_item">A hacking, mucus producing cough is often present with a cold</li>
+       <li class="product_item">A dry, non-mucus producing cough is usually present with the flu</li><br>
+       <center><img src="images/3cough.png" height='200'></center>
+  </div>
+  <div id="tabs-4">
+       <p>Sneezing is commonly present with a cold and rare with a flu</p><br>
+       <center><img src="images/4sneeze.png" height='200'></center>
+  </div>
+  <div id="tabs-5">
+        <li class="product_item">Usually accompanies a cold and typically resolves within a week</li>
+        <li class="product_item">Can be present with the flu</li><br>
+        <center><img src="images/5stuffy.png" height='300'></center>
+  </div>
+  <div id="tabs-6">
+        <li class="product_item">Pain and inflammation in the throat that usually comes with a cold</li>
+        <li class="product_item">Not as common, but can be present with the flu </li><br>
+        <center><img src="images/6throat.png" height='200'></center>
+  </div>
+  <div id="tabs-7">
+        <li class="product_item">Pain or abnormal sensations along the front of the body between the neck and upper abdomen</li>
+        <li class="product_item">Mild to moderate with a cold</li>
+        <li class="product_item">Severe with the flu</li><br>
+        <center><img src="images/7pain.png" height='200'></center>
+  </div>
+  <div id="tabs-8">
+        <p>Uncommon with a cold, but present in 80% of flu cases</p><br>
+        <center><img src="images/8headache.png" height='225'></center>
+  </div>
+</div>
+  
+        
+    </div></div>
+      </div>
+  </div>
+</div>
+
+<!--ABOUT AND GENERAL-->
+
+  <div id="about" class="text-center"><div class='container'>
+    <br><br><br><center><img src='images/about2.png' height='50'></center>
+    <h2>For further information about your symptoms, contact the following:</h2>
+
+    <a href="https://www.ox.ac.uk/students/welfare/health/doctors?wssl=1" target="_blank"><img src='images/collegenurse.png' height='40'></a><br>
+    <a href="https://www.google.co.uk/search?q=chemist+near+me" target="_blank"><img src='images/chemist.png' height='40'></a><br><br>
+    <p class="lead">For more urgent care, please go to your GP or the emergency room</p>
+    <p class="lead">Call 111 for more information, or 999 for a life-threatening emergency</p>
+
+    <img src="images/disclaimer.png" height='50'><br>
+    <img src="images/disclaimer2.png" height='80'>
+      <br><br> 
+      <form role='form'>
+        <label for="email">Find out more</label>
+        <input type="text" name="email" >
+      <button type="submit" class="btn btn-success">Send</button><br><br>
+    </form>
+    <div id='social-buttons'>
+      <a href="https://twitter.com/NHSEngland" target="_blank"><img src="images/twitter.png" height="40"></a>
+      <a href="https://www.facebook.com/NHSChoices/" target="_blank"><img src="images/facebook.png" height="40"></a>
+      <a href="https://www.pinterest.ca/uhsmadison/stomp-the-flu/" target="_blank"><img src="images/pinterest.png" height="40"></a><br><br>
+    </div>
+  </div>
+</div>
+</body>
+
+
+<!-- Sandwich from: © Kosoff | <a href="http://www.dreamstime.com/">Dreamstime Stock Photos</a> & <a href="http://www.stockfreeimages.com/">Stock Free Images</a> -->
 </html>
+
